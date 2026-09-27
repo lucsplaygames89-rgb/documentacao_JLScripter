@@ -1,0 +1,66 @@
+import [#style, #test como teste, #json]
+
+teste("style cria objeto estruturado e aliases", func() {
+    va larguraBase = 320
+    va corBase = "#18181b"
+    va card = style({
+        width: larguraBase,
+        altura: "50vh",
+        background: corBase,
+        opacity: 0.9,
+        padding: [8, 16],
+        layout: "flex",
+        hover: { escala: 1.02, cor: "white" },
+        transition: { duracao: 200 ms, easing: "ease-out" },
+        responsive: { celular: { largura: "100%" } }
+    })
+
+    teste.igual(card.largura, 320)
+    teste.igual(card.altura, "50vh")
+    teste.igual(card.fundo, "#18181b")
+    teste.igual(card.paddingTopo, 8)
+    teste.igual(card.paddingDireita, 16)
+    teste.igual(card.paddingBaixo, 8)
+    teste.igual(card.paddingEsquerda, 16)
+    teste.igual(card.hover.escala, 1.02)
+    teste.igual(card.responsivo.celular.largura, "100%")
+    teste.igual(card.transicao.duracao, 200 ms)
+    teste.verdadeiro(card.tem("layout"))
+    teste.igual(json.parse(json.stringify(card)).hover.escala, 1.02)
+})
+
+teste("style compoe sem alterar a base", func() {
+    va base = style({ largura: 100, cor: "black" })
+    va final = style.juntar(base, { largura: 240, raio: "8px" })
+    teste.igual(base.largura, 100)
+    teste.igual(final.largura, 240)
+    teste.igual(final.cor, "black")
+    teste.igual(final.raio, "8px")
+})
+
+teste("style cria tema com tokens livres", func() {
+    va tema = style.tema({ primaria: "#7c3aed", espacamento: 8 })
+    teste.igual(tema.primaria, "#7c3aed")
+    teste.igual(tema.espacamento, 8)
+    va botao = style({ fundo: tema.primaria, padding: tema.espacamento })
+    teste.igual(botao.fundo, "#7c3aed")
+    teste.igual(botao.paddingEsquerda, 8)
+})
+
+teste("style valida layout, sombra, posicao e transformacao", func() {
+    va painel = style({
+        layout: "grid",
+        colunas: 2,
+        gap: 12,
+        posicao: "relativa",
+        zIndex: 3,
+        sombra: { x: 0, y: 4, blur: 20, color: "#00000055" },
+        foco: { bordaCor: "white", rotacao: "5deg" }
+    })
+    teste.igual(painel.layout, "grid")
+    teste.igual(painel.sombra.cor, "#00000055")
+    teste.igual(painel.foco.rotacao, "5deg")
+    teste.igual(painel.objeto().zIndex, 3)
+})
+
+mostrar("STYLE_OK")

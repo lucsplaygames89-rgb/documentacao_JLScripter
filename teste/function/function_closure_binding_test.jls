@@ -1,0 +1,12 @@
+criarLeitor() {
+    va valor = 1
+    va lerValor = func() {
+        mostrar(valor)
+    }
+
+    valor = 2
+    retorne lerValor
+}
+
+va leitor = criarLeitor()
+leitor()

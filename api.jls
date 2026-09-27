@@ -1,0 +1,9 @@
+import #api
+
+va app = api.criarApi(3000)
+
+app.get("/", func(req, res) {
+    res.enviar("Minha primeira API em JLScript!")
+})
+
+app.iniciar()

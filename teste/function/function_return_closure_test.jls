@@ -1,0 +1,8 @@
+criarMensagem(texto) {
+    retorne func() {
+        mostrar(texto)
+    }
+}
+
+va executarMensagem = criarMensagem("closure funcionando")
+executarMensagem()

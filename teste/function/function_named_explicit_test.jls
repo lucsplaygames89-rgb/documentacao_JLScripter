@@ -1,0 +1,5 @@
+func somaExplicita(a, b) {
+    retorne a + b
+}
+
+mostrar(somaExplicita(2, 3))

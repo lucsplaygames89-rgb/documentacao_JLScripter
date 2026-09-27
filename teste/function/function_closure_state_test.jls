@@ -1,0 +1,12 @@
+criarContador() {
+    va contador = 0
+
+    retorne func() {
+        contador = contador + 1
+        retorne contador
+    }
+}
+
+va contar = criarContador()
+mostrar(contar())
+mostrar(contar())

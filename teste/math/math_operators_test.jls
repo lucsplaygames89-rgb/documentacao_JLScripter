@@ -1,0 +1,71 @@
+// Bateria oficial de matematica - operadores e precedencia
+import #math
+
+// Aritmetica basica
+mostrar(2 + 2)          // 4
+mostrar(10 - 5)         // 5
+mostrar(3 * 4)          // 12
+mostrar(10 / 2)         // 5
+mostrar(10 % 3)         // 1
+
+// Precedencia de operadores
+mostrar(2 + 3 * 4)      // 14
+mostrar((2 + 3) * 4)    // 20
+mostrar(2 * (3 + 4))    // 14
+mostrar(2 + 3 * 4 - 1)  // 13
+mostrar(100 - 50 - 25)  // 25
+
+// Operadores unarios
+mostrar(-10)            // -10
+mostrar(-10 + 5)        // -5
+mostrar(-(-5))          // 5
+
+// Numeros decimais e precisao
+mostrar(2.5 + 2.5)      // 5
+mostrar(10 / 3)         // 3.33333333333333
+mostrar(0.1 + 0.2)      // 0.3
+mostrar(1 / 2)          // 0.5
+
+// Zero
+mostrar(0)              // 0
+mostrar(5 - 5)          // 0
+
+// Modulo com numeros negativos
+mostrar(-10 % 3)        // -1
+mostrar(10 % -3)        // 1
+
+// Operacoes encadeadas
+mostrar(2 + 3 * 4 - 1)  // 13
+mostrar((10 + 5) * (10 - 5)) // 75
+
+// Comparacoes
+mostrar(3 > 2)          // true
+mostrar(3 < 2)          // false
+mostrar(3 >= 3)         // true
+mostrar(2 <= 1)         // false
+mostrar(2 + 2 == 4)     // true
+mostrar(2 + 2 != 5)     // true
+
+// Funções realmente matemáticas do módulo math
+mostrar(math.PI)
+mostrar(math.raiz(16))              // 4
+mostrar(math.absoluto(-7))          // 7
+mostrar(math.arredondar(2.6))       // 3
+mostrar(math.teto(2.1))             // 3
+mostrar(math.piso(2.9))             // 2
+mostrar(math.truncar(-2.9))         // -2
+mostrar(math.seno(0))               // 0
+mostrar(math.cosseno(0))            // 1
+mostrar(math.tangente(0))           // 0
+mostrar(math.log(1))                // 0
+mostrar(math.log10(100))            // 2
+mostrar(math.exp(0))                // 1
+mostrar(math.media([1, 2, 3, 4]))   // 2.5
+mostrar(math.mediana([1, 2, 3, 4])) // 2.5
+mostrar(math.maximo([3, 1, 4, 1, 5])) // 5
+mostrar(math.minimo([3, 1, 4, 1, 5])) // 1
+mostrar(math.somaLista([1, 2, 3]))  // 6
+mostrar(math.radianos(180))         // 3.14159265358979
+mostrar(math.graus(math.PI))        // 180
+mostrar(math.subtrair([3, 4], [1, 2])) // [2, 2]
+mostrar(math.multiplicar([[1, 2]], [[3], [4]])) // [[11]]

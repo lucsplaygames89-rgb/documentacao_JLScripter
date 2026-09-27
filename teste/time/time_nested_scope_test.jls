@@ -1,0 +1,8 @@
+func agendar() {
+    va mensagem = "escopo preservado"
+    tempo.depois(25 ms, func() {
+        mostrar(mensagem)
+    })
+}
+
+agendar()

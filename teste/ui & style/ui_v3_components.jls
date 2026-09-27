@@ -1,0 +1,39 @@
+import [#ui, #style]
+
+va app = ui.window()
+app.title("JLScript UI Components")
+app.ui({
+    main {
+        strong("IMPORTANTE")
+        em("ENFASE")
+        code("va ativo = true")
+        link("DOCUMENTACAO", href="https://jlscript.dev")
+        progress(value=70, min=0, max=100)
+        switch("ATIVADO", checked)
+        separator
+        select {
+            optgroup {
+                option("Primeiro")
+                option("Segundo", selected)
+            }
+        }
+        details {
+            summary("RESUMO_FECHADO")
+            p("CONTEUDO_OCULTO")
+        }
+        details(open) {
+            summary("RESUMO_ABERTO")
+            p("CONTEUDO_VISIVEL")
+        }
+        dialog { p("DIALOGO_FECHADO") }
+        dialog(open) { p("DIALOGO_ABERTO") }
+        row(class="actions") {
+            button("ACEITAR")
+            button("CANCELAR")
+        }
+    }
+})
+app.style({ width: 760px, height: 720px, padding: 20px, gap: 8px })
+style.class("actions", { gap: 12px })
+app.open()
+mostrar("UI_V3_CLOSED")

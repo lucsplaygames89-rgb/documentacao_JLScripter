@@ -1,0 +1,7 @@
+va relogio = tempo.cada(100 ms, func() {
+    mostrar("tick")
+})
+esperar(500 ms)
+relogio.cancelar()
+esperar(150 ms)
+mostrar("cancelado")

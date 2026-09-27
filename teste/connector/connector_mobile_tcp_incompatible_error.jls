@@ -1,0 +1,10 @@
+import #connector
+import #mobile
+
+let connection = #connector.ip(
+    "192.168.1.2",
+    38472,
+    { timeout: 5 seconds }
+)
+
+let phone = #mobile.connect(connection)

@@ -1,0 +1,8 @@
+import [#ui, #style]
+va app = ui.janela()
+app.nome("JL Preview Test")
+app.ui({ main { h1("Preview real") } })
+app.style({ width: 100vw, height: 100vh, background("#101010"), color("#ffffff") })
+app.abrir()
+mostrar("UI_PREVIEW_CLOSED")
+

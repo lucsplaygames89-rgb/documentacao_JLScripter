@@ -1,0 +1,44 @@
+import [#ui, #style]
+
+va bloquear = true
+va classeBotao = "entrar"
+va app = ui.window()
+app.title("JLScript UI V2")
+app.ui({
+    main(class="app", id="principal") {
+        section(class="login") {
+            h1("Bem-vindo")
+            p("Entre na sua conta")
+            form {
+                label("Email")
+                input(type="email", placeholder="Email", required)
+                label("Senha")
+                input(type="password", placeholder="Senha", required)
+                btn(class=classeBotao, disabled=bloquear) { text = "Entrar" }
+            }
+        }
+    }
+})
+app.style({
+    width: 800px,
+    height: 600px,
+    background("#101010"),
+    color(rgb(255, 255, 255)),
+    padding: 20px
+})
+style.class("login", {
+    width: 400px,
+    padding: 24px,
+    margin: 20px,
+    borderRadius: 12px,
+    background("#181818")
+})
+style.class("entrar", {
+    width: 100%,
+    height: 48px,
+    background("#ff0000"),
+    color("#ffffff"),
+    borderRadius: 8px
+})
+mostrar(app)
+mostrar("UI_V2_CONFIG_OK")

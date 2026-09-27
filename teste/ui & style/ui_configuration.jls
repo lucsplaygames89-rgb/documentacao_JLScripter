@@ -1,0 +1,10 @@
+import [#ui, #style]
+va app = ui.janela()
+app.titulo("JLScript UI Test")
+mostrar(app)
+app.ui({ 
+    div { text = "Olá mundo" 
+    button = "Clique aqui" 
+} })
+app.style({ fundo: "#101010", largura: 800, altura: 600 })
+mostrar("UI_CONFIG_OK")

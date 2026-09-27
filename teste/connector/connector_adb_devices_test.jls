@@ -1,0 +1,3 @@
+import #connector
+
+show(#connector.adbDevices({ timeout: 10 seconds }))

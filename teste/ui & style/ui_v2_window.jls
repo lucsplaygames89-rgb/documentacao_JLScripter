@@ -1,0 +1,31 @@
+import [#ui, #style]
+va bloquear = true
+va app = ui.window()
+app.title("JLScript UI V2")
+app.ui({
+    main(class="app") {
+        section(class="login", id="login") {
+            h1("Bem-vindo", estilo=style({ color: "#ffffff", fontWeight: "bold" }))
+            p("Entre na sua conta")
+            form {
+                label("Email")
+                input(type="email", placeholder="Email", required)
+                label("Senha")
+                input(type="password", placeholder="Senha", required)
+                btn(class="entrar", disabled=bloquear) { text = "Entrar" }
+            }
+        }
+        div(class="oculto") { p("NAO_DEVE_APARECER") }
+        btn(class="badge") { text = "FIXED_BADGE" }
+    }
+})
+app.style({ width: 800px, height: 600px, background("#101010"), color("#ffffff"), padding: 20px })
+style.type("h1", { fontSize: 2rem })
+style.class("app", { alignItems: "center" })
+style.class("login", { width: 400px, padding: 24px, margin: 20px, borderRadius: 12px, background("#181818") })
+style.id("login", { borderWidth: 1px, borderColor("#333333") })
+style.class("entrar", { width: 100%, height: 48px, background("#ff0000"), color("#ffffff"), borderRadius: 8px })
+style.class("oculto", { display: "none" })
+style.class("badge", { width: 120px, height: 32px, position: "fixed", right: 16px, bottom: 16px, zIndex: 10, fontFamily: "Consolas", fontWeight: "bold", background("#2563eb"), color("#ffffff") })
+app.open()
+mostrar("UI_V2_CLOSED")

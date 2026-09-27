@@ -1,0 +1,10 @@
+import #connector
+
+let connection = connector.usb()
+show(connection.type())
+show(connection.state())
+show(connection.connected())
+show(connection.address())
+show(connection.capabilities())
+connection.close()
+show(connection.state())

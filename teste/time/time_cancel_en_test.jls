@@ -1,0 +1,8 @@
+let ticks = 0
+let clock = time.every(25 ms, func() {
+    ticks = ticks + 1
+})
+wait(90 ms)
+clock.cancel()
+wait(50 ms)
+show(ticks)

@@ -1,0 +1,9 @@
+aplicar(callback, valor) {
+    retorne callback(valor)
+}
+
+va dobrar = func(numero) {
+    retorne numero * 2
+}
+
+mostrar(aplicar(dobrar, 6))

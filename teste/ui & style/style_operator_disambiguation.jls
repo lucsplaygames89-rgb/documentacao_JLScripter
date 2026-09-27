@@ -1,0 +1,7 @@
+va numero = 12
+mostrar(numero % 5)
+
+va potencia = 1
+va passo = 0
+enquanto (passo < 4) { potencia = potencia * 2 passo++ }
+mostrar(potencia)

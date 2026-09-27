@@ -1,0 +1,17 @@
+import [
+    #audio,
+    #file como arquivo
+]
+
+va som = audio.abrir("tests/build/audio-module/original.wav")
+mostrar(som.duracao)
+mostrar(som.canais)
+mostrar(som.taxa)
+som.cortar(inicio: 100 ms, fim: 600 ms)
+som.volume(80)
+mostrar(som.salvar("tests/build/audio-module/corte.wav"))
+mostrar(arquivo.existe("tests/build/audio-module/corte.wav"))
+va corte = audio.abrir("tests/build/audio-module/corte.wav")
+mostrar(corte.duracao)
+mostrar(corte.canais)
+mostrar(corte.taxa)

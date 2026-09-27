@@ -1,0 +1,3 @@
+import #connector
+
+connector.bluetooth("JLS_DEVICE_THAT_DOES_NOT_EXIST")

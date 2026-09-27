@@ -1,0 +1,3 @@
+import [#ui, #style]
+va app = ui.janela()
+app.style({ width: 10banana })

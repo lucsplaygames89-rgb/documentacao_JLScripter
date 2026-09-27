@@ -1,0 +1,11 @@
+va somaValor = func(a, b) {
+    retorne a + b
+}
+
+mostrar(somaValor(2, 3))
+
+va callback = func() {
+    mostrar("ok")
+}
+
+callback()

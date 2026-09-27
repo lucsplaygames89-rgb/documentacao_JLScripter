@@ -1,0 +1,11 @@
+import #connector
+
+let connection = #connector.adb("127.0.0.1", 9, { timeout: 500 milliseconds })
+show(connection.state())
+show(connection.type())
+show(connection.address())
+show(connection.port())
+show(connection.error())
+
+let compact = #connector.adb("127.0.0.1:9", { timeout: 500 milliseconds })
+show(compact.state())

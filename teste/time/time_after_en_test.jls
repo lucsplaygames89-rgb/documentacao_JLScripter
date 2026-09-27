@@ -1,0 +1,4 @@
+time.after(25 ms, func() {
+    show("executed")
+})
+wait(50 ms)

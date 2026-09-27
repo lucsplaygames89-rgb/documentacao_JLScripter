@@ -1,0 +1,17 @@
+codigo=JL601
+mensagem=Falha ao vincular a porta 3000 (talvez ja esteja em uso): 10048
+explicacao=A porta solicitada já está sendo usada por outro processo ou não pode ser aberta.
+sugestao=Encerre o processo que usa a porta ou escolha outra: criarApi(3001).
+arquivo=D:\documentacao_JLScripter\api.jls
+linha=0
+coluna=0
+--- fonte ---
+import #api
+
+va app = api.criarApi(3000)
+
+app.get("/", func(req, res) {
+    res.enviar("Minha primeira API em JLScript!")
+})
+
+app.iniciar()

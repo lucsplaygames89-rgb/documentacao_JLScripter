@@ -1,0 +1,19 @@
+import [#ui, #style]
+va app = ui.janela()
+app.ui({
+    main {
+        header { nav { span("Navegação") } }
+        section { article { h1("H1") h2("H2") h3("H3") h4("H4") h5("H5") h6("H6") p("P") text("Texto") } }
+        aside { ul { li("A") li("B") } ol { li("1") li("2") } }
+        form {
+            label("Nome") input(type="text", required, readonly=false)
+            textarea(placeholder="Mensagem")
+            checkbox(checked) radio(checked=false)
+            select { option("Um") option("Dois") }
+            button("Botão") btn { text = "Alias" }
+        }
+        table { thead { tr { th("Nome") th("Idade") } } tbody { tr { td("Lucas") td("20") } } tfoot { tr { td("Total") td("1") } } }
+        footer { span("Fim") }
+    }
+})
+mostrar("UI_V2_ELEMENTS_OK")

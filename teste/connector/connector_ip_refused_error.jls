@@ -1,0 +1,20 @@
+import #connector
+import #mobile
+
+show(#connector.adbPair(
+    "192.168.1.2",
+    37123, // porta de pareamento
+    "123456"
+))
+
+let connection = #connector.adb(
+    "192.168.1.2",
+    37641, // porta de conexão, não a de pareamento
+    { timeout: 10 seconds }
+)
+
+show(connection.state())
+show(connection.error())
+
+let phone = #mobile.connect(connection)
+show(phone.stats())

@@ -1,0 +1,3 @@
+tempo.depois(25 ms, func() {
+    mostrar("fim")
+})

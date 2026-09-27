@@ -1,0 +1,12 @@
+import [#ui, #style]
+va app = ui.janela()
+app.titulo("Teste PT")
+app.ui({
+    div(class="conteiner") {
+        h1("Olá mundo")
+        btn(desabilitado) { text = "Entrar" }
+    }
+})
+app.style({ largura: 100vw, altura: 100vh, fundo("#101010"), cor("#ffffff"), preenchimento: 20px })
+style.classe("conteiner", { largura: 50%, margem: 2rem, raioBorda: 1.5em })
+mostrar("UI_V2_PT_OK")

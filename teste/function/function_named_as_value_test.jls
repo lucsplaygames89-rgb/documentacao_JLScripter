@@ -1,0 +1,6 @@
+triplicar(numero) {
+    retorne numero * 3
+}
+
+va operacao = triplicar
+mostrar(operacao(4))

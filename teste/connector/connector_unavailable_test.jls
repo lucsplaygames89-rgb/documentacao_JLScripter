@@ -1,0 +1,10 @@
+import #connector
+
+va conexao = connector.usb()
+mostrar(conexao.tipo())
+mostrar(conexao.estado())
+mostrar(conexao.conectado())
+mostrar(conexao.endereco())
+mostrar(conexao.capacidades())
+conexao.fechar()
+mostrar(conexao.estado())

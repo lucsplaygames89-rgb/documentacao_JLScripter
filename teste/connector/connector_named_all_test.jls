@@ -1,0 +1,11 @@
+import #connector
+
+let connection = #connector.adb(
+    address = "127.0.0.1",
+    port = 9,
+    timeout = 200 ms
+)
+show(connection.type())
+show(connection.address())
+show(connection.port())
+show(connection.state())

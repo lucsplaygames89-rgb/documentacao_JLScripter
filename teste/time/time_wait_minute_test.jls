@@ -1,0 +1,3 @@
+mostrar("inicio-minuto")
+esperar(1 min)
+mostrar("fim-minuto")

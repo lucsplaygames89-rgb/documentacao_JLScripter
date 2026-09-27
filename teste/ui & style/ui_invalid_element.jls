@@ -1,0 +1,3 @@
+import #ui
+va app = ui.janela()
+app.ui({ div { input = "não suportado" } })

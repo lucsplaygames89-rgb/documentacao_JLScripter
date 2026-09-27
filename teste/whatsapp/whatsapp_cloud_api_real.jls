@@ -1,0 +1,29 @@
+import [#api, #whatsapp]
+
+va servidor = api.criar(39203)
+
+servidor.post("/vTeste/phone-123/messages", func(req, res) {
+    res.json({
+        autorizado: req.header("Authorization"),
+        corpo: req.body(),
+        caminho: req.path()
+    })
+})
+
+servidor.iniciar()
+
+va cliente = whatsapp.criar({
+    token: "token-de-teste",
+    phoneNumberId: "phone-123",
+    versao: "vTeste",
+    baseUrl: "http://127.0.0.1:39203",
+    nome: "e2e"
+})
+
+va resposta = cliente.mensagem.enviar("+55 61 99441-6869", "Olá pela Cloud API")
+mostrar(resposta.status)
+mostrar(resposta.ok)
+mostrar(resposta.corpo)
+mostrar(cliente.info())
+
+servidor.parar()

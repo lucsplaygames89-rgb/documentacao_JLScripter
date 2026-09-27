@@ -1,0 +1,6 @@
+tempo.depois(50 ms, func() {
+    mostrar("disparou-uma-vez")
+})
+
+esperar(250 ms)
+mostrar("fim")

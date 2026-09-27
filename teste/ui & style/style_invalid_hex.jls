@@ -1,0 +1,2 @@
+import #style
+va quebrado = style({ fundo: "#GGG" })

@@ -1,0 +1,4 @@
+show("A")
+wait(1 second)
+wait(25 milliseconds)
+show("B")

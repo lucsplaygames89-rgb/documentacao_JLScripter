@@ -1,0 +1,5 @@
+somaCurta(a, b) {
+    retorne a + b
+}
+
+mostrar(somaCurta(2, 3))

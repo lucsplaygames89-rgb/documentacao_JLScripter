@@ -1,0 +1,24 @@
+import [#ui, #style]
+
+va app = ui.janela()
+app.titulo("JLScript UI Test")
+app.ui({
+    div {
+        text = "Olá mundo"
+        div {
+            button = "Clique aqui"
+        }
+    }
+})
+app.style({
+    fundo: "#101010",
+    cor: "#ffffff",
+    largura: 800,
+    altura: 600,
+    tamanhoFonte: 20,
+    padding: 24,
+    margem: 12,
+    raio: 12
+})
+app.abrir()
+mostrar("UI_CLOSED")

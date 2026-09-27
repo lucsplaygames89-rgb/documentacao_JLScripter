@@ -1,0 +1,10 @@
+import [#ui, #style]
+va app = ui.janela()
+app.ui({
+    table(class="dados") {
+        thead { tr { th("Nome") th("Idade") } }
+        tbody { tr { td("Lucas") td("20") } }
+    }
+})
+style.class("dados", { width: 100%, borderWidth: 1px, borderColor("#333333") })
+mostrar("UI_V2_TABLE_OK")

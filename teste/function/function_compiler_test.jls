@@ -1,0 +1,9 @@
+dobro(numero) {
+    retorne numero * 2
+}
+
+va incrementar = func(numero) {
+    retorne numero + 1
+}
+
+mostrar(dobro(incrementar(4)))

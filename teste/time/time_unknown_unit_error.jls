@@ -1,0 +1,3 @@
+va banana = 'oi'
+
+mostrar(esperar(5 banana))

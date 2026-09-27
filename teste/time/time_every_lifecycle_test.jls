@@ -1,0 +1,6 @@
+va timer = tempo.cada(100 ms, func() {
+    mostrar("tick-ativo")
+})
+esperar(350 ms)
+timer.cancelar()
+mostrar("timer-cancelado")

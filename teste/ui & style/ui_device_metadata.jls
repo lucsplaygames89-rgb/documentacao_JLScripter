@@ -1,0 +1,8 @@
+import [#ui, #style]
+va app = ui.janela()
+app.nome("JL Mobile")
+app.dispositivo("celular", sistema="android", largura=412px, altura=915px)
+app.orientacao("retrato")
+mostrar(app.informacoes())
+mostrar("UI_DEVICE_PT_OK")
+

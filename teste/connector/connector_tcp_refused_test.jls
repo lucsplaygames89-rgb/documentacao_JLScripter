@@ -1,0 +1,8 @@
+import #connector
+
+let connection = #connector.ip("127.0.0.1", 9, { timeout: 300 milliseconds })
+show(connection.state())
+show(connection.type())
+show(connection.address())
+show(connection.port())
+show(connection.error())

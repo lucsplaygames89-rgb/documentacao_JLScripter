@@ -1,0 +1,8 @@
+import [#ui, #style]
+let app = ui.window()
+app.name("JL Tablet")
+app.device("tablet", system="ios", width=820px, height=1180px)
+app.orientation("portrait")
+show(app.info())
+show("UI_DEVICE_EN_OK")
+

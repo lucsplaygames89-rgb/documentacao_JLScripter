@@ -1,0 +1,10 @@
+import #connector
+
+let connection = #connector.ip("192.168.1.2", 3000, { timeout: 2 seconds })
+show(connection.state())
+show(connection.type())
+show(connection.address())
+show(connection.port())
+show(connection.connected())
+connection.disconnect()
+show(connection.state())

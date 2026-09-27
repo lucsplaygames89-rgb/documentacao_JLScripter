@@ -1,0 +1,7 @@
+mostrar("A")
+esperar(1 segundo)
+esperar(100 ms)
+esperar(1 seg)
+va minuto = 1 min
+mostrar(minuto)
+mostrar("B")

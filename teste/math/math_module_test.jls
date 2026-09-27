@@ -1,0 +1,10 @@
+import #math
+
+mostrar(10 + 20)
+mostrar(math.raiz(81))
+mostrar(math.media([5, 10, 15, 20]))
+mostrar(math.produtoEscalar([1, 2, 3], [4, 5, 6]))
+mostrar(math.determinante([[1, 2], [3, 4]]))
+mostrar(math.PI)
+// Listas mantem os colchetes em mostrar(). Para saida matematica limpa,
+// use math.exibir() (ou mostrar(math.formatar(...))).

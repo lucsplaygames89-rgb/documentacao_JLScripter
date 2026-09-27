@@ -1,0 +1,9 @@
+import #style como visual
+
+va corPrimaria = "#ff0000"
+va botao = visual({ fundo: corPrimaria, largura: 200, altura: 50 })
+va destaque = visual.juntar(botao, { raio: 10 })
+
+mostrar(botao.fundo)
+mostrar(destaque.raio)
+mostrar(botao.tem("raio"))

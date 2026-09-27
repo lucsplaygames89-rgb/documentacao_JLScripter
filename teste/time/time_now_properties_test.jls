@@ -1,0 +1,7 @@
+import #json
+
+va atual = tempo.agora()
+
+mostrar(atual.ano)
+mostrar(atual.hora)
+mostrar(json.stringify(atual))

@@ -1,0 +1,4 @@
+tempo.depois(500 ms, func() {
+    mostrar("ok")
+})
+esperar(150 ms)
